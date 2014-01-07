@@ -50,22 +50,22 @@ public class DateParser {
     // so we have to check the most complete format first, then it fails with
     // exception
     private static final String[] RFC822_MASKS = {
+			"EEE, dd MMM yy HH:mm:ss z",
+			"EEE, dd MMM yy HH:mm:ss Z",
+			"EEE, dd MMM yy HH:mm z",
+			"EEE, dd MMM yy HH:mm Z",
             "EEE, dd MMM yyyy HH:mm:ss z",
             "EEE, dd MMM yyyy HH:mm:ss Z",
             "EEE, dd MMM yyyy HH:mm z",
             "EEE, dd MMM yyyy HH:mm Z",
-            "EEE, dd MMM yy HH:mm:ss z",
-            "EEE, dd MMM yy HH:mm:ss Z",
-            "EEE, dd MMM yy HH:mm z",
-            "EEE, dd MMM yy HH:mm Z",
+			"dd MMM yy HH:mm:ss z",
+			"dd MMM yy HH:mm:ss Z",
+			"dd MMM yy HH:mm z",
+			"dd MMM yy HH:mm Z",
             "dd MMM yyyy HH:mm:ss z",
             "dd MMM yyyy HH:mm:ss Z",
             "dd MMM yyyy HH:mm z",
-            "dd MMM yyyy HH:mm Z",
-            "dd MMM yy HH:mm:ss z",
-            "dd MMM yy HH:mm:ss Z",
-            "dd MMM yy HH:mm z",
-            "dd MMM yy HH:mm Z"
+            "dd MMM yyyy HH:mm Z"
     };
 
     // order is like this because the SimpleDateFormat.parse does not fail with
